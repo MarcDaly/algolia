@@ -1,5 +1,7 @@
 #root {
     background-color: rgb(240, 240, 240);
+    overflow: auto;
+
 }
 
 body {
@@ -58,10 +60,11 @@ body {
 
 .left-col {
     text-align: center;
-    width: 100%;
 
     .ais-RefinementList {
         padding-bottom: 1rem;
+        margin: auto;
+        width: 95%;
 
         .ais-RefinementList-item--selected {
             font-weight: 600;
@@ -71,13 +74,11 @@ body {
         }
     
         .ais-RefinementList-item {
-            width: 100%;
             background-color: #fff;
             margin-bottom: 0.5rem;
             border-radius: 9999px;
     
             .ais-RefinementList-label{
-                width: 100%;
                 justify-content: space-between;
                 padding: 0rem 0.7rem;
     
@@ -98,7 +99,6 @@ body {
 
 .right-col {
     width: 100%;
-    padding-right: 2rem;
 }
 
 .hits {
