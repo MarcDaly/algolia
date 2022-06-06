@@ -33,14 +33,15 @@ function Hit({ hit }) {
                 <h2>
                     <Highlight attribute="name" hit={hit} />
                 </h2>
-                <p>{hit.area}</p>
                 <p>{hit.city}</p>
+                <p>{hit.state}</p>
                 <div className="ratings-reviews">
                     <p className="ratings">
                         {"\u2B50 ".repeat(hit.rounded_stars_count)}
                         {hit.reviews_count}
                     </p>
                 </div>
+                <p>{hit.phone_number}</p>
                 <p>{hit.food_type}</p>
                 <button
                     type="button"
