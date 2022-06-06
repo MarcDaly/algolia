@@ -15,7 +15,6 @@ const AddRestaurantForm = (props) => {
 
     function handleInputChange(e) {
         setFormValues({ ...formValues, [e.target.name]: e.target.value });
-        console.log(formValues, "fv");
     }
 
     function handleSubmitForm(e) {
@@ -25,7 +24,6 @@ const AddRestaurantForm = (props) => {
         });
         for (const value in formValues) {
             setFormValues((prevState) => ({ ...prevState, [value]: "" }));
-            console.log(value, "vv", formValues, "vvv");
         }
     }
 
