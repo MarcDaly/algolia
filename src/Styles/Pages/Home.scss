@@ -1,0 +1,151 @@
+#root {
+    background-color: rgb(240, 240, 240);
+}
+
+body {
+    height: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0.5rem 1rem;
+    background: rgb(180, 180, 180);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.controls {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+
+    .controls-search {
+        padding-bottom: 1.2rem;
+        margin: auto;
+        display: block;
+    }
+}
+
+.grid-container {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+.side-col-title{
+    color:rgb(70, 70, 70);
+    text-align: center;
+}
+
+.left-col {
+    text-align: center;
+    width: 100%;
+
+    .ais-RefinementList-item {
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 0.5rem;
+        border-radius: 9999px;
+
+        .ais-RefinementList-label{
+            width: 100%;
+            justify-content: space-between;
+            padding: 0rem 0.7rem;
+
+            .ais-RefinementList-checkbox{
+                display: none;
+                background-color: rgb(240, 240, 240);
+            }
+
+            .ais-RefinementList-count {
+                border-style: none;
+            }
+        }
+
+        
+    }
+}
+
+.right-col {
+    width: 100%;
+    padding-right: 2rem;
+}
+
+.ais-RefinementList-item--selected {
+    font-weight: 600;
+    border-style: solid;
+    border-color: green;
+    color: rgb(0, 101, 2)
+}
+
+.hits {
+    margin: auto;
+
+    .ais-Hits-list {
+        display: block;
+
+       .ais-Hits-item {
+        display: block;
+        // width: 100%;
+
+        .hit {
+            align-items: center;
+    
+            img {
+                float: left;
+                height: 200px;
+                width: 200px;
+                padding-right: 1rem;
+            }
+    
+            .hit-content {
+                padding-left: 1rem;
+            }
+    
+            button {
+                width: 100%;
+                margin-top: 1rem;
+                padding: 0.5rem;
+                background-color: rgb(255, 50, 50);
+                color: #fff;
+                border: none;
+                border-radius: 9999px;
+                cursor: pointer;
+            }
+        }
+       }
+    }
+
+}
+
+.hit-img {
+    display: inline-block;
+}
+
+
+.pagination {
+    margin: 2rem auto;
+    text-align: center;
+    width: auto;
+    
+    .ais-Pagination {
+        margin: auto;
+        width: 50%;
+        .ais-Pagination-list {
+            justify-content: center;
+        }
+    }
+}
