@@ -20,8 +20,14 @@ const searchClient = algoliasearch(
 const index = searchClient.initIndex("restaurants");
 
 function Hit({ hit }) {
+    function handleDeleteButton(objectID) {
+        let element = document.getElementsByClassName("hit " + objectID);
+        element[0].parentElement.style.display = "none";
+        index.deleteObject(hit.objectID);
+    }
+
     return (
-        <div className="hit">
+        <div className={`hit ${hit.objectID}`}>
             <img
                 className="hit-img"
                 src={hit.image_url}
@@ -45,7 +51,7 @@ function Hit({ hit }) {
                 <p>{hit.food_type}</p>
                 <button
                     type="button"
-                    onClick={() => index.deleteObject(hit.objectID)}
+                    onClick={() => handleDeleteButton(hit.objectID)}
                 >
                     Not Interested
                 </button>
